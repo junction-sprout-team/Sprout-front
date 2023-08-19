@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct MyPageView: View {
-//    @State var pickedItem =
+
     var body: some View {
-        HStack(spacing: 0){
-            Text("MyPageView")
-//           Picker(selection: Binding<Hashable>, content: <#T##() -> View#>, label: <#T##() -> View#>)
+        VStack {
+            Text("Sprout")
+            
         }
+        .background(Color.mainPrimary500.ignoresSafeArea())
     }
 }
 

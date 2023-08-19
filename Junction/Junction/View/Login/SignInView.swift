@@ -19,42 +19,75 @@ struct SignInView: View {
     
     var body: some View {
         VStack (alignment: .leading, spacing: 0){
-            Text("SignIn")
-            // MARK: 사용자 이름
-            Text("user의 이름: \(userName)")
-            TextField("이름을 입력해주세요!", text: $userName)
-                .frame(width: 300, height: 10)
-                .padding()
-                .background(Color(.systemGray6))
-                .cornerRadius(5.0)
-                .padding(.bottom, 20)
+            Text("Welcome!")
+                .font(.pretendard(.medium, size: 28))
+                .foregroundColor(.mainPrimary500)
+                .padding(.bottom, 52)
             
-            // MARK: 아이디
-            Text("user의 아이디: \(userID)")
-            TextField("아이디를 입력해주세요!", text: $userID)
-                .frame(width: 300, height: 10)
-                .padding()
-                .background(Color(.systemGray6))
-                .cornerRadius(5.0)
-                .padding(.bottom, 20)
-            
-            // MARK: 비밀번호
-            Text("user의 비밀번호: \(userPassword)")
-            TextField("비밀번호를 입력하세요", text: $userPassword)
-                .frame(width: 300, height: 10)
-                .padding()
-                .background(Color(.systemGray6))
-                .cornerRadius(5.0)
-                .padding(.bottom, 20)
-            
-            // MARK: 비밀번호 확인
-            
-            TextField("비밀번호를 다시 입력하세요", text: $userPasswordCheck)
-                .frame(width: 300, height: 10)
-                .padding()
-                .background(Color(.systemGray6))
-                .cornerRadius(5.0)
-                .padding(.bottom, 20)
+            VStack (alignment: .leading, spacing: 16){
+                VStack (alignment: .leading,spacing: 4){
+                    // MARK: 아이디
+                    Text("ID")
+                        .font(.pretendard(.medium, size: 16))
+                        .foregroundColor(.textLight300)
+                    TextField("", text: $userID)
+                        .frame(maxWidth: .infinity)
+                        .frame(height: 36)
+                        .background(Color.clear)
+                        .overlay(content: {
+                            RoundedRectangle(cornerRadius: 10)
+                                .inset(by: 0.5)
+                                .stroke(.blue)
+                        })
+                }
+                VStack (alignment: .leading,spacing: 4){
+                    // MARK: 비밀번호
+                    Text("Password")
+                        .font(.pretendard(.medium, size: 16))
+                        .foregroundColor(.textLight300)
+                    TextField("", text: $userPassword)
+                        .frame(maxWidth: .infinity)
+                        .frame(height: 36)
+                        .background(Color.clear)
+                        .overlay(content: {
+                            RoundedRectangle(cornerRadius: 10)
+                                .inset(by: 0.5)
+                                .stroke(.blue)
+                        })
+                }
+                
+                VStack (alignment: .leading,spacing: 4){
+                    // MARK: 비밀번호 확인
+                    Text("Password Check")
+                        .font(.pretendard(.medium, size: 16))
+                        .foregroundColor(.textLight300)
+                    TextField("", text: $userPasswordCheck)
+                        .frame(maxWidth: .infinity)
+                        .frame(height: 36)
+                        .background(Color.clear)
+                        .overlay(content: {
+                            RoundedRectangle(cornerRadius: 10)
+                                .inset(by: 0.5)
+                                .stroke(.blue)
+                        })
+                }
+                VStack (alignment: .leading,spacing: 4){
+                    // MARK: 사용자 닉네임
+                    Text("Nickname")
+                        .font(.pretendard(.medium, size: 16))
+                        .foregroundColor(.textLight300)
+                    TextField("", text: $userName)
+                        .frame(maxWidth: .infinity)
+                        .frame(height: 36)
+                        .background(Color.clear)
+                        .overlay(content: {
+                            RoundedRectangle(cornerRadius: 10)
+                                .inset(by: 0.5)
+                                .stroke(.blue)
+                        })
+                }
+            } // TextField VStack
+            .padding(.bottom, 48)
             
             if isClicked && userPassword != userPasswordCheck{
                 Text("비밀번호가 일치하지 않습니다! 다시 확인해보세요")
@@ -80,10 +113,16 @@ struct SignInView: View {
                 
                 
             } label: {
-                Text("회원가입")
+                Text("Confirm")
+                    .font(.pretendard(.bold, size: 16))
+                    .foregroundColor(.white)
+                    .padding(.vertical, 13)
+                    .frame(maxWidth: .infinity)
+                    .background(Color.mainPrimary500.cornerRadius(12))
             }.disabled(userPassword != userPasswordCheck)
-        }
-        .padding(20)
+    
+        } // VStack
+        .padding(.horizontal, 52)
         .border(.red)
     }
 }

@@ -37,7 +37,7 @@ struct MainView: View {
                     
                     NavigationLink {
                         // destination
-                        
+                        MyPageView()
                     } label: {
                         Image(systemName: "line.3.horizontal")
                             .resizable()

@@ -19,94 +19,101 @@ struct LoginView: View {
                 //                        ProfileDetailView(userEmail: self.email, userAccessToken: self.userAccessToken)
                 MainView()
             } else {
-                VStack{
-                    Text("LogIn")
-                        .font(.title)
-                        .fontWeight(.medium)
-                        .padding()
-                        .foregroundColor(.black)
-                    HStack{
-                        Image(systemName: "person.fill")
+                VStack (spacing: 0){
+                    HStack {
+                        Spacer()
+                        Image("logoText")
                             .resizable()
-                            .scaledToFit()
-                            .frame(width: 30, height: 30)
-                            .padding(.bottom)
-                        
-                        TextField("아이디를 입력하세요.", text: $userID)
-                            .frame(width: 300, height: 10)
-                            .padding()
-                            .background(Color(.systemGray6))
-                            .cornerRadius(5.0)
-                            .padding(.bottom, 20)
-                        
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 106)
+                        Spacer()
                     }
-                    HStack{
-                        Image(systemName: "lock")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 30, height: 30)
-                            .padding(.bottom)
-                        
-                        SecureField("비밀번호를 입력하세요", text: $password)
-                            .frame(width: 300, height: 10)
-                            .padding()
-                            .background(Color(.systemGray6))
-                            .cornerRadius(5.0)
-                            .padding(.bottom, 20)
-                    }
-                    
-                    HStack{
-                        Button(action: {
-                            print(self.userID + self.password)
+                    .padding(.bottom, 56)
+                    VStack (spacing: 12){
+                        HStack{
+                            Text("ID")
+                                .font(.pretendard(.medium, size: 16))
+                                .foregroundColor(.textLight300)
+                                .frame(width: 25)
                             
-                            let rft = readItemKeyChain(userId: self.userID)
-                            if rft != nil {
-                                UserDefaults.standard.set(rft, forKey: self.userID)
-                            } else{
-                                sendPostRequest("\(url)users/signin", parameters: ["userID": self.userID, "password": self.password]){
-                                    responseObject, error in guard let _ = responseObject, error == nil else {
-                                        print(error ?? "Unknown error")
-                                        return
-                                    }
-                                    self.loginStatus = true
-                                    // 로그인이 되었을때, 앱에 사용자의 ID, PW를 저장
-                                    UserDefaults.standard.set(self.userID, forKey: "userID")
-                                    UserDefaults.standard.set(self.password, forKey: "password")
-                                
-                                    //                                            if let rftToken = responseObject {
-                                    //                                                let rft = rftToken["refresh"] as? String
-                                    //                                                self.userAccessToken = rftToken["access"] as? String ?? ""
-                                    //                                                setItemKeyChain(userId: self.userID, rft: rft!)
-                                    //                                                UserDefaults.standard.set(rft, forKey: self.userID)
-                                    //                                            }
-                                }
-                            }
-                        }){
-                            Text("로그인")
-                                .frame(width: 80, height: 10)
-                                .font(.headline)
-                                .foregroundColor(.white)
-                                .padding()
-                                .background(Color(.systemBlue))
-                                .cornerRadius(10)
+                            TextField("", text: $userID)
+                                .frame(maxWidth: .infinity)
+                                .frame(height: 36)
+                                .background(Color.clear)
+                                .overlay(content: {
+                                    RoundedRectangle(cornerRadius: 10)
+                                        .inset(by: 0.5)
+                                        .stroke(.blue)
+                                })
                             
                         }
-                        .padding()
+                        HStack{
+                            Text("PW")
+                                .font(.pretendard(.medium, size: 16))
+                                .foregroundColor(.textLight300)
+                                .frame(width: 25)
+                            TextField("", text: $password)
+                                .frame(maxWidth: .infinity)
+                                .frame(height: 36)
+                                .background(Color.clear)
+                                .overlay(content: {
+                                    RoundedRectangle(cornerRadius: 10)
+                                        .inset(by: 0.5)
+                                        .stroke(.blue)
+                                })
+                        }
+                    }
+                    .padding(.bottom, 48)
+                    
+                    Button(action: {
+                        print(self.userID + self.password)
+                        
+                        let rft = readItemKeyChain(userId: self.userID)
+                        if rft != nil {
+                            UserDefaults.standard.set(rft, forKey: self.userID)
+                        } else{
+                            sendPostRequest("\(url)users/signin", parameters: ["userID": self.userID, "password": self.password]){
+                                responseObject, error in guard let _ = responseObject, error == nil else {
+                                    print(error ?? "Unknown error")
+                                    return
+                                }
+                                self.loginStatus = true
+                                // 로그인이 되었을때, 앱에 사용자의 ID, PW를 저장
+                                UserDefaults.standard.set(self.userID, forKey: "userID")
+                                UserDefaults.standard.set(self.password, forKey: "password")
+                            
+                                //                                            if let rftToken = responseObject {
+                                //                                                let rft = rftToken["refresh"] as? String
+                                //                                                self.userAccessToken = rftToken["access"] as? String ?? ""
+                                //                                                setItemKeyChain(userId: self.userID, rft: rft!)
+                                //                                                UserDefaults.standard.set(rft, forKey: self.userID)
+                                //                                            }
+                            }
+                        }
+                    }){
+                        Text("Sign in")
+                            .frame(maxWidth: .infinity)
+                            .font(.pretendard(.bold, size: 16))
+                            .foregroundColor(.white)
+                            .padding(.vertical, 13)
+                            .background(Color.mainPrimary500)
+                            .cornerRadius(10)
+                        
+                    }.padding(.bottom, 16)
+                    
+                    HStack {
+                        Text("Don't have an account?")
+                            .font(.pretendard(.medium, size: 12))
+                            .foregroundColor(Color.textLight300)
                         
                         NavigationLink(destination: SignInView()){
-                            Text("회원가입")
-                                .frame(width: 80, height: 10)
-                                .font(.headline)
-                                .foregroundColor(.white)
-                                .padding()
-                                .background(Color(.systemBlue))
-                                .cornerRadius(10)
-                        }
-                        
-                    }
-                    
+                            Text("Sign Up")
+                                .font(.pretendard(.medium, size: 12))
+                                .foregroundColor(Color.mainPrimary500)
+                        } // NavigationLink
+                    }.padding(.bottom, 190)
                 }
-                .padding(.all, 30)
+                .padding(.horizontal, 52)
                 .navigationBarTitle("", displayMode: .inline)
                 .navigationBarHidden(true)
             }

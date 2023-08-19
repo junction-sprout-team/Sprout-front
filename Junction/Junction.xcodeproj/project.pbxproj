@@ -31,7 +31,6 @@
 		3E444AC42A90424200A04A3D /* MyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E444AC32A90424200A04A3D /* MyPageView.swift */; };
 		3E444AC82A90E43000A04A3D /* MainViewComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E444AC72A90E43000A04A3D /* MainViewComponent.swift */; };
 		3E444ACB2A90E84900A04A3D /* TripModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E444ACA2A90E84900A04A3D /* TripModel.swift */; };
-		3E444ACE2A90EFB900A04A3D /* MyForeignerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E444ACD2A90EFB900A04A3D /* MyForeignerView.swift */; };
 		3E64148E2A910F20005478B6 /* RegisterRideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E64148D2A910F20005478B6 /* RegisterRideView.swift */; };
 		3E6414902A913B0B005478B6 /* MainModalArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E64148F2A913B0B005478B6 /* MainModalArea.swift */; };
 		3E6414922A913F51005478B6 /* RectangleListArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6414912A913F51005478B6 /* RectangleListArea.swift */; };
@@ -65,7 +64,6 @@
 		3E444AC52A90439E00A04A3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		3E444AC72A90E43000A04A3D /* MainViewComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewComponent.swift; sourceTree = "<group>"; };
 		3E444ACA2A90E84900A04A3D /* TripModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripModel.swift; sourceTree = "<group>"; };
-		3E444ACD2A90EFB900A04A3D /* MyForeignerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyForeignerView.swift; sourceTree = "<group>"; };
 		3E64148D2A910F20005478B6 /* RegisterRideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRideView.swift; sourceTree = "<group>"; };
 		3E64148F2A913B0B005478B6 /* MainModalArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModalArea.swift; sourceTree = "<group>"; };
 		3E6414912A913F51005478B6 /* RectangleListArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleListArea.swift; sourceTree = "<group>"; };
@@ -131,7 +129,6 @@
 				3E444AC62A90E41900A04A3D /* Component */,
 				3E444AA32A90406800A04A3D /* Main */,
 				3E64148C2A910DD5005478B6 /* RegisterRide */,
-				3E444ACC2A90EF8B00A04A3D /* Foreigner */,
 				3E444A992A8FF5B500A04A3D /* Login */,
 				3E444AC22A90420800A04A3D /* MyPageView */,
 			);
@@ -240,14 +237,6 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		3E444ACC2A90EF8B00A04A3D /* Foreigner */ = {
-			isa = PBXGroup;
-			children = (
-				3E444ACD2A90EFB900A04A3D /* MyForeignerView.swift */,
-			);
-			path = Foreigner;
-			sourceTree = "<group>";
-		};
 		3E64148C2A910DD5005478B6 /* RegisterRide */ = {
 			isa = PBXGroup;
 			children = (
@@ -351,7 +340,6 @@
 				3E444A9F2A8FFD9200A04A3D /* ProfileDetailView.swift in Sources */,
 				3E444AA22A8FFEED00A04A3D /* UserDefaultManager.swift in Sources */,
 				3E444AAE2A90415200A04A3D /* FontExtension.swift in Sources */,
-				3E444ACE2A90EFB900A04A3D /* MyForeignerView.swift in Sources */,
 				3E444AAA2A90411D00A04A3D /* ColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
