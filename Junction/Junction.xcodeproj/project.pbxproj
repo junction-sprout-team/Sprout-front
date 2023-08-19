@@ -16,6 +16,22 @@
 		3E444A9D2A8FFC0800A04A3D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E444A9C2A8FFC0800A04A3D /* LoginView.swift */; };
 		3E444A9F2A8FFD9200A04A3D /* ProfileDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E444A9E2A8FFD9200A04A3D /* ProfileDetailView.swift */; };
 		3E444AA22A8FFEED00A04A3D /* UserDefaultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E444AA12A8FFEED00A04A3D /* UserDefaultManager.swift */; };
+		3E444AA52A90407E00A04A3D /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E444AA42A90407E00A04A3D /* MainView.swift */; };
+		3E444AA72A90408E00A04A3D /* GroupListArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E444AA62A90408E00A04A3D /* GroupListArea.swift */; };
+		3E444AAA2A90411D00A04A3D /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E444AA92A90411D00A04A3D /* ColorExtension.swift */; };
+		3E444AAE2A90415200A04A3D /* FontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E444AAD2A90415200A04A3D /* FontExtension.swift */; };
+		3E444AB92A9041DC00A04A3D /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3E444AB02A9041DC00A04A3D /* Pretendard-SemiBold.otf */; };
+		3E444ABA2A9041DC00A04A3D /* Pretendard-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3E444AB12A9041DC00A04A3D /* Pretendard-ExtraLight.otf */; };
+		3E444ABB2A9041DC00A04A3D /* Pretendard-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3E444AB22A9041DC00A04A3D /* Pretendard-ExtraBold.otf */; };
+		3E444ABC2A9041DC00A04A3D /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3E444AB32A9041DC00A04A3D /* Pretendard-Bold.otf */; };
+		3E444ABD2A9041DC00A04A3D /* Pretendard-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3E444AB42A9041DC00A04A3D /* Pretendard-Light.otf */; };
+		3E444ABE2A9041DC00A04A3D /* Pretendard-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3E444AB52A9041DC00A04A3D /* Pretendard-Black.otf */; };
+		3E444ABF2A9041DC00A04A3D /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3E444AB62A9041DC00A04A3D /* Pretendard-Medium.otf */; };
+		3E444AC02A9041DC00A04A3D /* Pretendard-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3E444AB72A9041DC00A04A3D /* Pretendard-Thin.otf */; };
+		3E444AC12A9041DC00A04A3D /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3E444AB82A9041DC00A04A3D /* Pretendard-Regular.otf */; };
+		3E444AC42A90424200A04A3D /* MyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E444AC32A90424200A04A3D /* MyPageView.swift */; };
+		3E444AC82A90E43000A04A3D /* MainViewComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E444AC72A90E43000A04A3D /* MainViewComponent.swift */; };
+		3E444ACB2A90E84900A04A3D /* DestinationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E444ACA2A90E84900A04A3D /* DestinationModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +45,23 @@
 		3E444A9C2A8FFC0800A04A3D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		3E444A9E2A8FFD9200A04A3D /* ProfileDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetailView.swift; sourceTree = "<group>"; };
 		3E444AA12A8FFEED00A04A3D /* UserDefaultManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultManager.swift; sourceTree = "<group>"; };
+		3E444AA42A90407E00A04A3D /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		3E444AA62A90408E00A04A3D /* GroupListArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupListArea.swift; sourceTree = "<group>"; };
+		3E444AA92A90411D00A04A3D /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		3E444AAD2A90415200A04A3D /* FontExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontExtension.swift; sourceTree = "<group>"; };
+		3E444AB02A9041DC00A04A3D /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
+		3E444AB12A9041DC00A04A3D /* Pretendard-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraLight.otf"; sourceTree = "<group>"; };
+		3E444AB22A9041DC00A04A3D /* Pretendard-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraBold.otf"; sourceTree = "<group>"; };
+		3E444AB32A9041DC00A04A3D /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.otf"; sourceTree = "<group>"; };
+		3E444AB42A9041DC00A04A3D /* Pretendard-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Light.otf"; sourceTree = "<group>"; };
+		3E444AB52A9041DC00A04A3D /* Pretendard-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Black.otf"; sourceTree = "<group>"; };
+		3E444AB62A9041DC00A04A3D /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Medium.otf"; sourceTree = "<group>"; };
+		3E444AB72A9041DC00A04A3D /* Pretendard-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Thin.otf"; sourceTree = "<group>"; };
+		3E444AB82A9041DC00A04A3D /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
+		3E444AC32A90424200A04A3D /* MyPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageView.swift; sourceTree = "<group>"; };
+		3E444AC52A90439E00A04A3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		3E444AC72A90E43000A04A3D /* MainViewComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewComponent.swift; sourceTree = "<group>"; };
+		3E444ACA2A90E84900A04A3D /* DestinationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,12 +94,16 @@
 		3E444A862A8F8C1600A04A3D /* Junction */ = {
 			isa = PBXGroup;
 			children = (
+				3E444AC92A90E83800A04A3D /* Model */,
+				3E444AC52A90439E00A04A3D /* Info.plist */,
 				3E444AA02A8FFEC900A04A3D /* UserDefault */,
 				3E444A872A8F8C1600A04A3D /* JunctionApp.swift */,
 				3E444A892A8F8C1600A04A3D /* ContentView.swift */,
 				3E444A962A8FF3FD00A04A3D /* Network */,
 				3E444A952A8FF3F600A04A3D /* View */,
+				3E444AA82A90410B00A04A3D /* Utils */,
 				3E444A8B2A8F8C1800A04A3D /* Assets.xcassets */,
+				3E444A9E2A8FFD9200A04A3D /* ProfileDetailView.swift */,
 				3E444A8D2A8F8C1800A04A3D /* Preview Content */,
 			);
 			path = Junction;
@@ -83,8 +120,10 @@
 		3E444A952A8FF3F600A04A3D /* View */ = {
 			isa = PBXGroup;
 			children = (
-				3E444A9E2A8FFD9200A04A3D /* ProfileDetailView.swift */,
+				3E444AC62A90E41900A04A3D /* Component */,
+				3E444AA32A90406800A04A3D /* Main */,
 				3E444A992A8FF5B500A04A3D /* Login */,
+				3E444AC22A90420800A04A3D /* MyPageView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -112,6 +151,81 @@
 				3E444AA12A8FFEED00A04A3D /* UserDefaultManager.swift */,
 			);
 			path = UserDefault;
+			sourceTree = "<group>";
+		};
+		3E444AA32A90406800A04A3D /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				3E444AA42A90407E00A04A3D /* MainView.swift */,
+				3E444AA62A90408E00A04A3D /* GroupListArea.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		3E444AA82A90410B00A04A3D /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				3E444AAC2A90414300A04A3D /* Colors */,
+				3E444AAB2A90413C00A04A3D /* Fonts */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		3E444AAB2A90413C00A04A3D /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				3E444AAF2A9041CC00A04A3D /* Pretendard */,
+				3E444AAD2A90415200A04A3D /* FontExtension.swift */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		3E444AAC2A90414300A04A3D /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				3E444AA92A90411D00A04A3D /* ColorExtension.swift */,
+			);
+			path = Colors;
+			sourceTree = "<group>";
+		};
+		3E444AAF2A9041CC00A04A3D /* Pretendard */ = {
+			isa = PBXGroup;
+			children = (
+				3E444AB52A9041DC00A04A3D /* Pretendard-Black.otf */,
+				3E444AB32A9041DC00A04A3D /* Pretendard-Bold.otf */,
+				3E444AB22A9041DC00A04A3D /* Pretendard-ExtraBold.otf */,
+				3E444AB12A9041DC00A04A3D /* Pretendard-ExtraLight.otf */,
+				3E444AB42A9041DC00A04A3D /* Pretendard-Light.otf */,
+				3E444AB62A9041DC00A04A3D /* Pretendard-Medium.otf */,
+				3E444AB82A9041DC00A04A3D /* Pretendard-Regular.otf */,
+				3E444AB02A9041DC00A04A3D /* Pretendard-SemiBold.otf */,
+				3E444AB72A9041DC00A04A3D /* Pretendard-Thin.otf */,
+			);
+			path = Pretendard;
+			sourceTree = "<group>";
+		};
+		3E444AC22A90420800A04A3D /* MyPageView */ = {
+			isa = PBXGroup;
+			children = (
+				3E444AC32A90424200A04A3D /* MyPageView.swift */,
+			);
+			path = MyPageView;
+			sourceTree = "<group>";
+		};
+		3E444AC62A90E41900A04A3D /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				3E444AC72A90E43000A04A3D /* MainViewComponent.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		3E444AC92A90E83800A04A3D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3E444ACA2A90E84900A04A3D /* DestinationModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,8 +286,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E444AB92A9041DC00A04A3D /* Pretendard-SemiBold.otf in Resources */,
+				3E444AC02A9041DC00A04A3D /* Pretendard-Thin.otf in Resources */,
+				3E444ABC2A9041DC00A04A3D /* Pretendard-Bold.otf in Resources */,
 				3E444A8F2A8F8C1800A04A3D /* Preview Assets.xcassets in Resources */,
+				3E444ABB2A9041DC00A04A3D /* Pretendard-ExtraBold.otf in Resources */,
+				3E444ABD2A9041DC00A04A3D /* Pretendard-Light.otf in Resources */,
+				3E444ABA2A9041DC00A04A3D /* Pretendard-ExtraLight.otf in Resources */,
+				3E444ABE2A9041DC00A04A3D /* Pretendard-Black.otf in Resources */,
+				3E444AC12A9041DC00A04A3D /* Pretendard-Regular.otf in Resources */,
 				3E444A8C2A8F8C1800A04A3D /* Assets.xcassets in Resources */,
+				3E444ABF2A9041DC00A04A3D /* Pretendard-Medium.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,12 +308,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E444A982A8FF55700A04A3D /* SignInView.swift in Sources */,
+				3E444AA52A90407E00A04A3D /* MainView.swift in Sources */,
 				3E444A8A2A8F8C1600A04A3D /* ContentView.swift in Sources */,
+				3E444AA72A90408E00A04A3D /* GroupListArea.swift in Sources */,
 				3E444A9B2A8FF97700A04A3D /* Network.swift in Sources */,
+				3E444AC42A90424200A04A3D /* MyPageView.swift in Sources */,
+				3E444ACB2A90E84900A04A3D /* DestinationModel.swift in Sources */,
 				3E444A9D2A8FFC0800A04A3D /* LoginView.swift in Sources */,
 				3E444A882A8F8C1600A04A3D /* JunctionApp.swift in Sources */,
+				3E444AC82A90E43000A04A3D /* MainViewComponent.swift in Sources */,
 				3E444A9F2A8FFD9200A04A3D /* ProfileDetailView.swift in Sources */,
 				3E444AA22A8FFEED00A04A3D /* UserDefaultManager.swift in Sources */,
+				3E444AAE2A90415200A04A3D /* FontExtension.swift in Sources */,
+				3E444AAA2A90411D00A04A3D /* ColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +452,7 @@
 				DEVELOPMENT_TEAM = GZMCL5Q7N2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Junction/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -351,6 +482,7 @@
 				DEVELOPMENT_TEAM = GZMCL5Q7N2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Junction/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
