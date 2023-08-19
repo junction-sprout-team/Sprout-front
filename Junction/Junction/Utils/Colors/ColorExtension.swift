@@ -8,10 +8,30 @@
 import SwiftUI
 
 extension Color {
-    // MARK: Black
-    static let kakaoBlack100 = Color("kakaoBlack100")
-    static let kakaoBlack200 = Color("kakaoBlack200")
-    static let kakaoBlack300 = Color("kakaoBlack300")
+    // MARK: Main
+    static let mainImport500 = Color("mainImport500")
+    static let mainPoint500 = Color("mainPoint500")
+    static let mainPrimary500 = Color("mainPrimary500")
+    static let mainSub1500 = Color("mainSub1500")
+    static let mainSub2500 = Color("mainSub2500")
+    
+    // MARK: System
+    static let systemBlack = Color("systemBlack")
+    static let systemGray1 = Color("systemGray1")
+    static let systemGray2 = Color("systemGray2")
+    static let systemGray3 = Color("systemGray3")
+
+    // MARK: Text
+    static let textColorImport = Color("textColorImport")
+    static let textColorPrimary = Color("textColorPrimary")
+    static let textDark300 = Color("textDark300")
+    static let textDark400 = Color("textDark400")
+    static let textDark500 = Color("textDark500")
+    static let textLight100 = Color("textLight100")
+    static let textLight200 = Color("textLight200")
+    static let textLight300 = Color("textLight300")
+    static let textLight400 = Color("textLight400")
+    static let textLight500 = Color("textLight500")
 }
 
 

@@ -25,6 +25,7 @@ struct MainView: View {
                     Spacer()
                     NavigationLink {
                         // destination
+                        
                     } label: {
                         Image(systemName: "list.bullet")
                             .resizable()
@@ -57,7 +58,7 @@ struct MainView: View {
                     }
                     
                     ForEach(tripData) { td in
-                        RectangleList(departure: td.departure, destination: td.destination, date: td.date, memeberName: td.memeberName, maxMember: td.maxMember)
+                        RectangleList(departure: td.departure, destination: td.destination, date: td.date, memeberName: td.memeberName, maxMember: td.maxMember, currentState: td.currentState, buttonColor: td.buttonColor)
                     }
                     
                 } // VStack
@@ -69,7 +70,7 @@ struct MainView: View {
 
 
 @ViewBuilder
-func RectangleList(departure: String, destination: String, date: String, memeberName: String, maxMember: Int) -> some View {
+func RectangleList(departure: String, destination: String, date: String, memeberName: String, maxMember: Int, currentState: String, buttonColor: Color) -> some View {
     Rectangle()
         .foregroundColor(.white)
         .cornerRadius(10)
@@ -101,11 +102,11 @@ func RectangleList(departure: String, destination: String, date: String, memeber
                     NavigationLink {
                         // destination
                     } label: {
-                        Text("Join")
-                            .foregroundColor(.black)
+                        Text(currentState)
+                            .foregroundColor(buttonColor == .mainSub2500 ? Color.white :  Color.black)
                             .padding(.horizontal, 15)
                             .padding(.vertical, 6)
-                            .background(Color.yellow.cornerRadius(8))
+                            .background(buttonColor.cornerRadius(8))
                     }
                     
                 } // HStack
