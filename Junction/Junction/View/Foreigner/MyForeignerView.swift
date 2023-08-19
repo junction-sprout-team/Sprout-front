@@ -15,9 +15,9 @@ struct MyForeignerView: View {
                 Text("Dear Sprout,")
                 Text("Awating Rides")
                 
-                ForEach(tripData) { td in
-                    RectangleList2(departure: td.departure, destination: td.destination, date: td.date, memeberName: td.memeberName, maxMember: td.maxMember)
-                }
+//                ForEach(tripData) { td in
+//                    RectangleList2(departure: td.departure, destination: td.destination, date: td.date, memeberName: td.memeberName, maxMember: td.maxMember)
+//                }
             }
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding(.leading, 39)

@@ -6,6 +6,27 @@
 //
 
 import SwiftUI
+//struct TripData: Codable {
+//    let tripDataResult: TripModels
+//}
+//
+//struct TripModels: Codable {
+//    let tripModelList: [TripModel]
+//}
+//
+//struct TripModel: Identifiable, Codable {
+//    var objectId: String
+//    var id: UUID = UUID()
+//    var departure: String
+//    var destination: String
+//    var date: String
+//    var imageTitle: String
+//    var memeberName: String
+//    var maxMember: Int
+//    var currentState: String
+//    var buttonColor: Color
+//}
+
 
 struct TripModel: Identifiable {
     var id: UUID = UUID()

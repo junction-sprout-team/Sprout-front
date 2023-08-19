@@ -53,8 +53,8 @@ struct ContentView: View {
 extension ContentView {
     var launchScreenView: some View {
         ZStack (alignment: .center){
-            LinearGradient(gradient: Gradient(colors: [.red, .blue]),
-                           startPoint: .top, endPoint: .bottom)
+            Image("Splash").resizable()
+                .aspectRatio(contentMode: .fill)
             .edgesIgnoringSafeArea(.all)
         }
     }

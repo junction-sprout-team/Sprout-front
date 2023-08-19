@@ -35,6 +35,7 @@
 		3E64148E2A910F20005478B6 /* RegisterRideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E64148D2A910F20005478B6 /* RegisterRideView.swift */; };
 		3E6414902A913B0B005478B6 /* MainModalArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E64148F2A913B0B005478B6 /* MainModalArea.swift */; };
 		3E6414922A913F51005478B6 /* RectangleListArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6414912A913F51005478B6 /* RectangleListArea.swift */; };
+		3E6414942A91492A005478B6 /* DataDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6414932A91492A005478B6 /* DataDecoder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +69,7 @@
 		3E64148D2A910F20005478B6 /* RegisterRideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRideView.swift; sourceTree = "<group>"; };
 		3E64148F2A913B0B005478B6 /* MainModalArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModalArea.swift; sourceTree = "<group>"; };
 		3E6414912A913F51005478B6 /* RectangleListArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleListArea.swift; sourceTree = "<group>"; };
+		3E6414932A91492A005478B6 /* DataDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDecoder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				3E444A9A2A8FF97700A04A3D /* Network.swift */,
+				3E6414932A91492A005478B6 /* DataDecoder.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -344,6 +347,7 @@
 				3E444A9D2A8FFC0800A04A3D /* LoginView.swift in Sources */,
 				3E444A882A8F8C1600A04A3D /* JunctionApp.swift in Sources */,
 				3E444AC82A90E43000A04A3D /* MainViewComponent.swift in Sources */,
+				3E6414942A91492A005478B6 /* DataDecoder.swift in Sources */,
 				3E444A9F2A8FFD9200A04A3D /* ProfileDetailView.swift in Sources */,
 				3E444AA22A8FFEED00A04A3D /* UserDefaultManager.swift in Sources */,
 				3E444AAE2A90415200A04A3D /* FontExtension.swift in Sources */,

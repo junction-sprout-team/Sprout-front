@@ -33,6 +33,7 @@ struct RectangleListArea: View {
                         .font(.pretendard(.light, size: 12))
                         .padding(.bottom, 10)
                     HStack (alignment: .center, spacing: 0){
+                        //Image(systemName: currentState == "Take the ride" ? "person.fill" : "car.fill")
                         Image(systemName: imageTitle)
                             .resizable()
                             .aspectRatio(contentMode: .fit)
@@ -54,10 +55,11 @@ struct RectangleListArea: View {
                             isModal = true
                         } label: {
                             Text(currentState)
-                                .foregroundColor(buttonColor == .mainSub2500 ? Color.white :  Color.black)
+                                .foregroundColor(buttonColor == .mainPoint500 ? .black : .white)
+                                //.foregroundColor(currentState == "Take the ride" ? Color.white :  Color.black)
                                 .padding(.horizontal, 15)
                                 .padding(.vertical, 6)
-                                .background(buttonColor.cornerRadius(8))
+                                .background(currentState == "Take the ride" ? Color.mainSub2500.cornerRadius(8) : Color.mainPoint500.cornerRadius(8))
                         }
                     } // HStack
                 }
