@@ -17,7 +17,6 @@
 		3E444A9F2A8FFD9200A04A3D /* ProfileDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E444A9E2A8FFD9200A04A3D /* ProfileDetailView.swift */; };
 		3E444AA22A8FFEED00A04A3D /* UserDefaultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E444AA12A8FFEED00A04A3D /* UserDefaultManager.swift */; };
 		3E444AA52A90407E00A04A3D /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E444AA42A90407E00A04A3D /* MainView.swift */; };
-		3E444AA72A90408E00A04A3D /* GroupListArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E444AA62A90408E00A04A3D /* GroupListArea.swift */; };
 		3E444AAA2A90411D00A04A3D /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E444AA92A90411D00A04A3D /* ColorExtension.swift */; };
 		3E444AAE2A90415200A04A3D /* FontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E444AAD2A90415200A04A3D /* FontExtension.swift */; };
 		3E444AB92A9041DC00A04A3D /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3E444AB02A9041DC00A04A3D /* Pretendard-SemiBold.otf */; };
@@ -34,6 +33,8 @@
 		3E444ACB2A90E84900A04A3D /* TripModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E444ACA2A90E84900A04A3D /* TripModel.swift */; };
 		3E444ACE2A90EFB900A04A3D /* MyForeignerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E444ACD2A90EFB900A04A3D /* MyForeignerView.swift */; };
 		3E64148E2A910F20005478B6 /* RegisterRideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E64148D2A910F20005478B6 /* RegisterRideView.swift */; };
+		3E6414902A913B0B005478B6 /* MainModalArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E64148F2A913B0B005478B6 /* MainModalArea.swift */; };
+		3E6414922A913F51005478B6 /* RectangleListArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6414912A913F51005478B6 /* RectangleListArea.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,7 +49,6 @@
 		3E444A9E2A8FFD9200A04A3D /* ProfileDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetailView.swift; sourceTree = "<group>"; };
 		3E444AA12A8FFEED00A04A3D /* UserDefaultManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultManager.swift; sourceTree = "<group>"; };
 		3E444AA42A90407E00A04A3D /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
-		3E444AA62A90408E00A04A3D /* GroupListArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupListArea.swift; sourceTree = "<group>"; };
 		3E444AA92A90411D00A04A3D /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		3E444AAD2A90415200A04A3D /* FontExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontExtension.swift; sourceTree = "<group>"; };
 		3E444AB02A9041DC00A04A3D /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
@@ -66,6 +66,8 @@
 		3E444ACA2A90E84900A04A3D /* TripModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripModel.swift; sourceTree = "<group>"; };
 		3E444ACD2A90EFB900A04A3D /* MyForeignerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyForeignerView.swift; sourceTree = "<group>"; };
 		3E64148D2A910F20005478B6 /* RegisterRideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRideView.swift; sourceTree = "<group>"; };
+		3E64148F2A913B0B005478B6 /* MainModalArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModalArea.swift; sourceTree = "<group>"; };
+		3E6414912A913F51005478B6 /* RectangleListArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleListArea.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,7 +165,8 @@
 			isa = PBXGroup;
 			children = (
 				3E444AA42A90407E00A04A3D /* MainView.swift */,
-				3E444AA62A90408E00A04A3D /* GroupListArea.swift */,
+				3E6414912A913F51005478B6 /* RectangleListArea.swift */,
+				3E64148F2A913B0B005478B6 /* MainModalArea.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -332,10 +335,11 @@
 				3E444A982A8FF55700A04A3D /* SignInView.swift in Sources */,
 				3E444AA52A90407E00A04A3D /* MainView.swift in Sources */,
 				3E444A8A2A8F8C1600A04A3D /* ContentView.swift in Sources */,
-				3E444AA72A90408E00A04A3D /* GroupListArea.swift in Sources */,
 				3E444A9B2A8FF97700A04A3D /* Network.swift in Sources */,
 				3E64148E2A910F20005478B6 /* RegisterRideView.swift in Sources */,
 				3E444AC42A90424200A04A3D /* MyPageView.swift in Sources */,
+				3E6414902A913B0B005478B6 /* MainModalArea.swift in Sources */,
+				3E6414922A913F51005478B6 /* RectangleListArea.swift in Sources */,
 				3E444ACB2A90E84900A04A3D /* TripModel.swift in Sources */,
 				3E444A9D2A8FFC0800A04A3D /* LoginView.swift in Sources */,
 				3E444A882A8F8C1600A04A3D /* JunctionApp.swift in Sources */,
