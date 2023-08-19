@@ -7,7 +7,7 @@
 
 import Foundation
 
-// MARK: POST
+// MARK: POST - 로그인 시 필요
 func sendPostRequest(_ url: String, parameters: [String: String], completion: @escaping ([String: Any]?, Error?) -> Void) {
     let targetUrl = URL(string: url)
     let paramData = try? JSONSerialization.data(withJSONObject: parameters)
@@ -30,6 +30,10 @@ func sendPostRequest(_ url: String, parameters: [String: String], completion: @e
         
         let responseObject = (try? JSONSerialization.jsonObject(with: data)) as? [String: Any]
         completion(responseObject, nil)
+        
+        print("로그인 성공!")
+        print(responseObject ?? "값 없음")
+        UserDefaults.standard.set(true, forKey: "isLoggedIn")
     }
     task.resume()
 }
