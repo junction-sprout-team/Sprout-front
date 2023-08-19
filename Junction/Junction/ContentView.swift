@@ -14,7 +14,9 @@ struct ContentView: View {
     var body: some View {
         ZStack {
             if isLoggedIn { // 로그인이 된 상태라면
-                MainView()
+                NavigationView {
+                    MainView()                    
+                }
             } else { // 로그인이 되지 않은 상태라면
                 VStack (spacing: 0){
                     LoginView()

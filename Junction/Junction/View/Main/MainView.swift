@@ -8,9 +8,7 @@
 import SwiftUI
 
 struct MainView: View {
-    @State var pickedDate: Date = Date()
-    @State var departure: String = ""
-    @State var destination: String = ""
+    
     @State var shareOption: Int = 0
     
     var body: some View {
@@ -25,15 +23,28 @@ struct MainView: View {
                     Spacer()
                     NavigationLink {
                         // destination
-                        
+                        RegisterRideView()
                     } label: {
-                        Image(systemName: "list.bullet")
+                        Image(systemName: "pencil")
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                             .frame(width: 20)
                             .foregroundColor(.black)
                     }
-                }.padding(.horizontal, 28)
+                    .padding(.horizontal, 10)
+                    
+                    NavigationLink {
+                        // destination
+                        
+                    } label: {
+                        Image(systemName: "line.3.horizontal")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 20)
+                            .foregroundColor(.black)
+                    }
+                } // HStack
+                .padding(.horizontal, 28)
                     .padding(.top, 28)
                     .padding(.bottom, 47)
                 
@@ -58,7 +69,7 @@ struct MainView: View {
                     }
                     
                     ForEach(tripData) { td in
-                        RectangleList(departure: td.departure, destination: td.destination, date: td.date, memeberName: td.memeberName, maxMember: td.maxMember, currentState: td.currentState, buttonColor: td.buttonColor)
+                        RectangleList(departure: td.departure, destination: td.destination, date: td.date, imageTitle: td.imageTitle, memeberName: td.memeberName, maxMember: td.maxMember, currentState: td.currentState, buttonColor: td.buttonColor)
                     }
                     
                 } // VStack
@@ -70,7 +81,7 @@ struct MainView: View {
 
 
 @ViewBuilder
-func RectangleList(departure: String, destination: String, date: String, memeberName: String, maxMember: Int, currentState: String, buttonColor: Color) -> some View {
+func RectangleList(departure: String, destination: String, date: String, imageTitle: String, memeberName: String, maxMember: Int, currentState: String, buttonColor: Color) -> some View {
     Rectangle()
         .foregroundColor(.white)
         .cornerRadius(10)
@@ -84,7 +95,7 @@ func RectangleList(departure: String, destination: String, date: String, memeber
                     .font(.pretendard(.light, size: 12))
                     .padding(.bottom, 10)
                 HStack (alignment: .center, spacing: 0){
-                    Image(systemName: "person.fill")
+                    Image(systemName: imageTitle)
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .frame(width: 11)

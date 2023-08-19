@@ -8,38 +8,11 @@
 import SwiftUI
 
 struct MyPageView: View {
+//    @State var pickedItem =
     var body: some View {
         HStack(spacing: 0){
             Text("MyPageView")
-            //                    HStack (alignment: .center, spacing: 20) {
-            //                        Text("Departure")
-            //                            .font(.pretendard(.bold, size: 16))
-            //                            .foregroundColor(Color(hex: 0x333333).opacity(0.4))
-            //                        Spacer()
-            //                        TextField("", text: $departure)
-            //                            .frame(width: 152, height: 36)
-            //                            .background(Color.clear)
-            //                            .overlay(content: {
-            //                                RoundedRectangle(cornerRadius: 10)
-            //                                    .inset(by: 0.5)
-            //                                    .stroke(.blue)
-            //                            })
-            //                    }.border(.blue) // Departure
-            //
-            //                    HStack (alignment: .center, spacing: 20) {
-            //                        Text("Destination")
-            //                            .font(.pretendard(.bold, size: 16))
-            //                            .foregroundColor(Color(hex: 0x333333).opacity(0.4))
-            //                        Spacer()
-            //                        TextField("", text: $destination)
-            //                            .frame(width: 152, height: 36)
-            //                            .background(Color.clear)
-            //                            .overlay(content: {
-            //                                RoundedRectangle(cornerRadius: 10)
-            //                                    .inset(by: 0.5)
-            //                                    .stroke(.blue)
-            //                            })
-            //                    }.border(.blue) // Destination
+//           Picker(selection: Binding<Hashable>, content: <#T##() -> View#>, label: <#T##() -> View#>)
         }
     }
 }

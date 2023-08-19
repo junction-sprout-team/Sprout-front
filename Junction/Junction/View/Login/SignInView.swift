@@ -73,6 +73,12 @@ struct SignInView: View {
                     }
                     
                 }
+                
+                // 회원가입이 되었을때, 앱에 사용자의 ID, PW를 저장
+                UserDefaults.standard.set(self.userID, forKey: "userID")
+                UserDefaults.standard.set(self.userPassword, forKey: "password")
+                
+                
             } label: {
                 Text("회원가입")
             }.disabled(userPassword != userPasswordCheck)
