@@ -14,62 +14,56 @@ struct MainView: View {
     @State var shareOption: Int = 0
     
     var body: some View {
-        VStack (alignment: .leading, spacing: 0){
-            HStack (spacing: 0){
-                Text("Catch your Car")
-                Spacer()
-                NavigationLink {
-                    // destination
-                } label: {
-                    Image(systemName: "list.bullet")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 20)
-                        .foregroundColor(.black)
+        ZStack(alignment: .bottom) {
+            Image("ImagBackground")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .offset(y: 40)
+            VStack (alignment: .leading, spacing: 0){
+                HStack (spacing: 0){
+                    Text("Catch your Car")
+                    Spacer()
+                    NavigationLink {
+                        // destination
+                    } label: {
+                        Image(systemName: "list.bullet")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 20)
+                            .foregroundColor(.black)
+                    }
+                }.padding(.horizontal, 28)
+                    .padding(.top, 28)
+                    .padding(.bottom, 47)
+                
+                // MARK: 화면 상단 중앙의 Text
+                VStack (alignment: .leading, spacing: 0) {
+                    Text("Dear Sprout, ")
+                        .foregroundColor(Color(hex: 0x333333).opacity(0.4))
+                        .font(.pretendard(.bold, size: 16))
+                        .padding(.bottom, 8)
+                    
+                    Text("Shall we go to make foriegn friends?")
+                        .multilineTextAlignment(.leading)
+                        .font(.pretendard(.medium, size: 28))
+                        .foregroundColor(Color(hex: 0x7fb6f6))
+                        .padding(.bottom, 90)
                 }
-            }.padding(.horizontal, 28)
-                .padding(.top, 28)
-                .padding(.bottom, 47)
-            
-            // MARK: 화면 상단 중앙의 Text
-            VStack (alignment: .leading, spacing: 0) {
-                Text("Dear Sprout, ")
-                    .foregroundColor(Color(hex: 0x333333).opacity(0.4))
-                    .font(.pretendard(.bold, size: 16))
-                    .padding(.bottom, 8)
-                    .border(.blue)
+                .padding(.leading, 32)
                 
-                Text("Shall we go to make foriegn friends?")
-                    .multilineTextAlignment(.leading)
-                    .font(.pretendard(.medium, size: 28))
-                    .foregroundColor(Color(hex: 0x7fb6f6))
-                    .padding(.bottom, 121.5)
-                    .border(.blue)
-                
-                
-                
+                ScrollView {
+                    RadioButtonGroup(items: ["All", "Only join", "Only Suggestion"], selectedId: "All") { selected in
+                        print("Selected is: \(selected)")
+                    }
+                    
+                    ForEach(tripData) { td in
+                        RectangleList(departure: td.departure, destination: td.destination, date: td.date, memeberName: td.memeberName, maxMember: td.maxMember)
+                    }
+                    
+                } // VStack
             }
-            .border(.red)
-            //                    .frame(maxWidth: .infinity, alignment: .leading)
-            .padding(.leading, 32)
-            //.padding(.trailing, 72)
-            .border(.red)
-            
-            
-            ScrollView {
-                RadioButtonGroup(items: ["All", "Only join", "Only Suggestion"], selectedId: "All") { selected in
-                    print("Selected is: \(selected)")
-                }
-                
-                RectangleList(departure: "Busan Station", destination: "Seomyeon Station", date: "Departed at August 20, 2023 (Sun) 15:30", memeberName: "Sprout", maxMember: 3)
-                
-            } // VStack
-            
+            .frame(maxWidth: .infinity, alignment: .leading)
         }
-        
-        .frame(maxWidth: .infinity, alignment: .leading)
-        
-        
     }
 }
 
@@ -88,14 +82,21 @@ func RectangleList(departure: String, destination: String, date: String, memeber
                 Text(date)
                     .font(.pretendard(.light, size: 12))
                     .padding(.bottom, 10)
-                HStack (alignment: .center){
+                HStack (alignment: .center, spacing: 0){
                     Image(systemName: "person.fill")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .frame(width: 11)
                         .foregroundColor(Color(hex: 0x7FB6F5))
+                        .padding(.trailing, 8)
                     Text(memeberName)
+                        .font(.pretendard(.medium, size: 12))
+                        .foregroundColor(Color(hex: 0x7FB6F6))
+                        .padding(.trailing, 4)
+                    
                     Text("max\(maxMember)")
+                        .font(.pretendard(.medium, size: 12))
+                        .foregroundColor(Color(hex: 0xC33939))
                     Spacer()
                     NavigationLink {
                         // destination
@@ -107,7 +108,7 @@ func RectangleList(departure: String, destination: String, date: String, memeber
                             .background(Color.yellow.cornerRadius(8))
                     }
                     
-                }
+                } // HStack
             }
             .padding(EdgeInsets(top: 20, leading: 23, bottom: 14, trailing: 24))
             

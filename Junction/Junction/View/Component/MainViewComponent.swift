@@ -63,6 +63,7 @@ struct RadioButton: View {
                     .foregroundColor(.blue)
                     .background(Color(hex: 0xffffff).opacity(0.5))
                     .modifier(ColorInvert())
+                    .cornerRadius(20)
                 Text(id)
                     .font(.pretendard(.regular, size: 13))
                     .foregroundColor(.black)
