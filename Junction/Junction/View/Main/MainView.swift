@@ -11,6 +11,8 @@ struct MainView: View {
     @State var shareOption: Int = 0
     @State var radioSelected: String = ""
     
+    @State var isModal: Bool = false // modal을 띄우기 위한 변수
+    
     var body: some View {
         ZStack(alignment: .bottom) {
             Image("ImagBackground")
@@ -79,66 +81,26 @@ struct MainView: View {
                     
                     
                     ForEach(tripData) { td in
-                        RectangleList(departure: td.departure, destination: td.destination, date: td.date, imageTitle: td.imageTitle, memeberName: td.memeberName, maxMember: td.maxMember, currentState: td.currentState, buttonColor: td.buttonColor)
+                        RectangleListArea(departure: td.departure, destination: td.destination, date: td.date, imageTitle: td.imageTitle, memeberName: td.memeberName, maxMember: td.maxMember, currentState: td.currentState, buttonColor: td.buttonColor, isModal: $isModal)
                     }
                     
                 } // ScrollView
             }
             .frame(maxWidth: .infinity, alignment: .leading)
-        }
+            .sheet(isPresented: $isModal) {
+                MainModalArea(departure: "Busan Station", destination: "Seomyeon Station", date: "Departed at August 20,  2023 (Sun) 15:30", imageTitle: "car.fill", memeberName: "Sprout", maxMember: 3, currentState: "Join", buttonColor: .mainPoint500)
+                    .presentationDetents([.sheetSize])
+            }
+        } // ZStack
     }
 }
 
-
-@ViewBuilder
-func RectangleList(departure: String, destination: String, date: String, imageTitle: String, memeberName: String, maxMember: Int, currentState: String, buttonColor: Color) -> some View {
-    Rectangle()
-        .foregroundColor(.white)
-        .cornerRadius(10)
-        .shadow(color: Color(hex: 0x333333).opacity(0.3), radius: 6, x: 4, y: 4)
-        .overlay(alignment: .topLeading) {
-            VStack (alignment: .leading, spacing: 0){
-                Text("\(departure) -> \(destination)")
-                    .font(.pretendard(.light, size: 16))
-                    .padding(.bottom, 8)
-                Text(date)
-                    .font(.pretendard(.light, size: 12))
-                    .padding(.bottom, 10)
-                HStack (alignment: .center, spacing: 0){
-                    Image(systemName: imageTitle)
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 11)
-                        .foregroundColor(Color(hex: 0x7FB6F5))
-                        .padding(.trailing, 8)
-                    Text(memeberName)
-                        .font(.pretendard(.medium, size: 12))
-                        .foregroundColor(Color(hex: 0x7FB6F6))
-                        .padding(.trailing, 4)
-                    
-                    Text("max\(maxMember)")
-                        .font(.pretendard(.medium, size: 12))
-                        .foregroundColor(Color(hex: 0xC33939))
-                    Spacer()
-                    NavigationLink {
-                        // destination
-                    } label: {
-                        Text(currentState)
-                            .foregroundColor(buttonColor == .mainSub2500 ? Color.white :  Color.black)
-                            .padding(.horizontal, 15)
-                            .padding(.vertical, 6)
-                            .background(buttonColor.cornerRadius(8))
-                    }
-                    
-                } // HStack
-            }
-            .padding(EdgeInsets(top: 20, leading: 23, bottom: 14, trailing: 24))
-            
-        }
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .frame(height: 113)
-        .padding(.horizontal, 39)
+// Sheet Size Custom
+// 339/852 -> 화면의 40프로만 차지
+extension PresentationDetent {
+    static let sheetSize = Self.height(UIScreen.main.bounds.height * 0.4)
 }
+
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
