@@ -15,7 +15,7 @@ struct ContentView: View {
         ZStack {
             if isLoggedIn { // 로그인이 된 상태라면
                 NavigationView {
-                    MainView()                    
+                    MainView()
                 }
             } else { // 로그인이 되지 않은 상태라면
                 VStack (spacing: 0){
@@ -37,7 +37,7 @@ struct ContentView: View {
     
     func autoLogin() {
         if let userID = UserDefaults.standard.string(forKey: "userID") {
-            if let password = UserDefaults.standard.string(forKey: "userID") {
+            if let password = UserDefaults.standard.string(forKey: "password") {
                 sendPostRequest("\(url)users/signin", parameters: ["userID": userID, "password": password]){
                     responseObject, error in guard let _ = responseObject, error == nil else {
                         print(error ?? "Unknown error")

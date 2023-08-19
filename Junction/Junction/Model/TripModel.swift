@@ -27,3 +27,5 @@ let tripData: [TripModel] = [
     TripModel(departure: "Busan Station", destination: "Seomyeon Station",date: "Departed at August 23, 2023 (Wed) 15:00", imageTitle: "person.fill", memeberName: "Sprout", maxMember: 3, currentState: "Join", buttonColor: .mainPoint500),
     TripModel(departure: "Haeundae", destination: "Seomyeon Station", date: "Departed at August 22, 2023 (Tue) 10:30", imageTitle: "car.fill", memeberName: "Junction", maxMember: 2, currentState: "Join", buttonColor: .mainPoint500)
 ]
+
+

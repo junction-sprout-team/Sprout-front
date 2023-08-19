@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct MainView: View {
-    
     @State var shareOption: Int = 0
+    @State var radioSelected: String = ""
     
     var body: some View {
         ZStack(alignment: .bottom) {
@@ -45,8 +45,8 @@ struct MainView: View {
                     }
                 } // HStack
                 .padding(.horizontal, 28)
-                    .padding(.top, 28)
-                    .padding(.bottom, 47)
+                .padding(.top, 28)
+                .padding(.bottom, 47)
                 
                 // MARK: 화면 상단 중앙의 Text
                 VStack (alignment: .leading, spacing: 0) {
@@ -66,13 +66,23 @@ struct MainView: View {
                 ScrollView {
                     RadioButtonGroup(items: ["All", "Only join", "Only Suggestion"], selectedId: "All") { selected in
                         print("Selected is: \(selected)")
+                        self.radioSelected = selected
+                        if radioSelected == "All" {
+                            getMethod(url+"journeys/all")
+                        }
+                        else if radioSelected == "Only join" {
+                            getMethod(url+"journeys/riderequest")
+                        } else {
+                            getMethod(url+"journeys/rideoffer")
+                        }
                     }
+                    
                     
                     ForEach(tripData) { td in
                         RectangleList(departure: td.departure, destination: td.destination, date: td.date, imageTitle: td.imageTitle, memeberName: td.memeberName, maxMember: td.maxMember, currentState: td.currentState, buttonColor: td.buttonColor)
                     }
                     
-                } // VStack
+                } // ScrollView
             }
             .frame(maxWidth: .infinity, alignment: .leading)
         }

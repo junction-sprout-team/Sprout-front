@@ -15,6 +15,10 @@ struct RegisterRideView: View {
     @State var peopleRide: Int = 0
     @State var introduce: String = ""
     
+    @State var isAlert: Bool = false // Alert를 띄우기 위한 변수
+    
+    @Environment(\.presentationMode) var presentationMode // 현재의 뷰를 제거(뒤로 가기)하기 위한 변수
+    
     var body: some View {
         VStack (alignment: .leading, spacing: 0){
             Text("Where are you\nheaded?")
@@ -63,6 +67,7 @@ struct RegisterRideView: View {
                         })
                 }
             } // TextField VStack
+            .padding(.top, 20)
             
             DatePicker(selection: $pickedDate) {
                 Text("When?")
@@ -113,10 +118,13 @@ struct RegisterRideView: View {
                     })
             }.padding(.top, 32)
             
+        
             Button {
                 // action
                 let formattedDate = formatDateToString(date: pickedDate, format: "yyyy-MM-dd HH:mm")
+                
                 // 2000-10-14 10:13
+                // At August 22, 2023 (Tue) 10:30
                 
                 let whoWrite = UserDefaults.standard.string(forKey: "userID") ?? ""
                 
@@ -125,7 +133,9 @@ struct RegisterRideView: View {
                         print(error ?? "Unknown error")
                         return
                     }
-                }
+                } // sendPostRequest
+                
+                isAlert = true // alert띄우기
             } label: {
                 Text("Give a ride")
                     .font(.pretendard(.bold, size: 16))
@@ -137,6 +147,11 @@ struct RegisterRideView: View {
             
         }
         .padding(.horizontal, 20)
+        .alert(isPresented: $isAlert) {
+            Alert(title: Text("Have a great trip!"), message: Text("Make sure to appreciate your driving mate!"), dismissButton: .default(Text("Confirm"), action: {
+                presentationMode.wrappedValue.dismiss() // 현재의 뷰를 제거(뒤로 가기)하기 위한 변수
+            })) // Alert
+        } // alert
     }
     
     // Date -> String
