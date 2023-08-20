@@ -17,7 +17,7 @@ struct LoginView: View {
         NavigationView{
             if self.loginStatus == true {
                 //                        ProfileDetailView(userEmail: self.email, userAccessToken: self.userAccessToken)
-                MainView()
+                MainView2()
             } else {
                 VStack (spacing: 0){
                     HStack {

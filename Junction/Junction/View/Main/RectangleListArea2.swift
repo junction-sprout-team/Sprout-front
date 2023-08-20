@@ -1,21 +1,22 @@
 //
-//  RectangleListArea.swift
+//  RectangleListArea2.swift
 //  Junction
 //
 //  Created by Bokyung on 2023/08/20.
 //
 
+
 import SwiftUI
 
-struct RectangleListArea: View {
+struct RectangleListArea2: View {
     var departure: String
     var destination: String
     var date: String
-    var imageTitle: String
+    //var imageTitle: String
     var memberName: String
     var maxMember: Int
     var currentState: String
-    var buttonColor: Color
+    //var buttonColor: Color
     
     @Binding var isModal: Bool // 모달을 띄울지 말지
     
@@ -34,7 +35,7 @@ struct RectangleListArea: View {
                         .padding(.bottom, 10)
                     HStack (alignment: .center, spacing: 0){
                         //Image(systemName: currentState == "Take the ride" ? "person.fill" : "car.fill")
-                        Image(systemName: imageTitle)
+                        Image(systemName: currentState == "Give a ride" ? "car.fill" : "person.fill")
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                             .frame(width: 11)
@@ -55,7 +56,7 @@ struct RectangleListArea: View {
                             isModal = true
                         } label: {
                             Text(currentState)
-                                .foregroundColor(buttonColor == .mainPoint500 ? .black : .white)
+                                .foregroundColor(currentState == "Give a ride" ? .black : .white)
                                 //.foregroundColor(currentState == "Take the ride" ? Color.white :  Color.black)
                                 .padding(.horizontal, 15)
                                 .padding(.vertical, 6)

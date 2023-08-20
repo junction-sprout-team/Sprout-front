@@ -26,11 +26,11 @@ struct RegisterRideView: View {
                 .foregroundColor(.mainPrimary500)
                 .padding(.top, 28)
             
-            Text("Make your friend on the same route")
-                .font(.pretendard(.medium, size: 16))
+            Text("Learn about different places, with the local")
+                .font(.pretendard(.bold, size: 16))
                 .foregroundColor(.textLight300)
             
-            RadioButtonGroup(items: ["Ride", "RideOffer"], selectedId: "Ride") { selected in
+            RadioButtonGroup(items: ["Ride request", "Ride offer"], selectedId: "Ride") { selected in
                 print("Selected is: \(selected)")
                 rideType = selected
             }.padding(.top, 41.5)
@@ -38,8 +38,8 @@ struct RegisterRideView: View {
             VStack (spacing: 12){
                 HStack (alignment: .center, spacing: 20) {
                     Text("Departure")
-                        .font(.pretendard(.bold, size: 16))
-                        .foregroundColor(Color(hex: 0x333333).opacity(0.4))
+                        .font(.pretendard(.medium, size: 16))
+                        .foregroundColor(.textLight500)
                     Spacer()
                     TextField("", text: $departure)
                         .frame(width: 180, height: 36)
@@ -54,8 +54,8 @@ struct RegisterRideView: View {
                 
                 HStack (alignment: .center, spacing: 20) {
                     Text("Destination")
-                        .font(.pretendard(.bold, size: 16))
-                        .foregroundColor(Color(hex: 0x333333).opacity(0.4))
+                        .font(.pretendard(.medium, size: 16))
+                        .foregroundColor(.textLight500)
                     Spacer()
                     TextField("", text: $destination)
                         .frame(width: 180, height: 36)
@@ -148,6 +148,7 @@ struct RegisterRideView: View {
         }
         .padding(.horizontal, 20)
         .alert(isPresented: $isAlert) {
+            
             Alert(title: Text("Have a great trip!"), message: Text("Make sure to appreciate your driving mate!"), dismissButton: .default(Text("Confirm"), action: {
                 presentationMode.wrappedValue.dismiss() // 현재의 뷰를 제거(뒤로 가기)하기 위한 변수
             })) // Alert

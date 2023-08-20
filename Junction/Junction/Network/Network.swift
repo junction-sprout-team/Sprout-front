@@ -100,75 +100,6 @@ func postMethod() {
 
 
 // MARK: GET
-
-// MARK: GET
-//func getMethod(_ url: String, completion: @escaping (Data?, Error?) -> Void) {
-//    // URL구조체 만들기
-//    guard let url = URL(string: url) else {
-//        print("Error: cannot create URL")
-//        return
-//    }
-//
-//    // URL요청 생성
-//    var request = URLRequest(url: url)
-//    request.httpMethod = "GET"
-//
-//    // 요청을 가지고 작업세션시작
-//    URLSession.shared.dataTask(with: request) { data, response, error in
-//        // 에러 처리
-//        if let error = error {
-//            print("Error: error calling GET")
-//            print(error)
-//            completion(nil, error)
-//            return
-//        }
-//
-//        // 옵셔널 바인딩
-//        guard let safeData = data else {
-//            print("Error: Did not receive data")
-//            completion(nil, nil)
-//            return
-//        }
-//
-//        // HTTP 200번대 정상코드인 경우만 다음 코드로 넘어감
-//        guard let response = response as? HTTPURLResponse, (200 ..< 299) ~= response.statusCode else {
-//            print("Error: HTTP request failed")
-//            completion(nil, nil)
-//            return
-//        }
-//
-//        // 원하는 모델이 있다면, JSONDecoder로 decode코드로 구현 ⭐️
-//        print("result is \(String(decoding: safeData, as: UTF8.self))")
-//        completion(safeData, nil)
-//
-//        print("response is : \(response)")
-//
-//    }.resume()     // 시작
-//}
-
-// 사용 예시
-//getMethod("your_url_here") { data, error in
-//    if let error = error {
-//        // 에러 처리
-//        print("An error occurred: \(error)")
-//        return
-//    }
-//    
-//    if let data = data {
-//        // 데이터 처리
-//        do {
-//            let decoder = JSONDecoder()
-//            let tripModels = try decoder.decode([TripModel].self, from: data)
-//            for trip in tripModels {
-//                print(trip)
-//            }
-//        } catch {
-//            print("Error decoding JSON: \(error)")
-//        }
-//    }
-//}
-
-
 func getMethod(_ url: String) {
     // URL구조체 만들기
     guard let url = URL(string: url) else {
@@ -202,11 +133,52 @@ func getMethod(_ url: String) {
 
         // 원하는 모델이 있다면, JSONDecoder로 decode코드로 구현 ⭐️
         print("result is \(String(decoding: safeData, as: UTF8.self))")
-        print("response is : \(response)")
+        //print("response is : \(response)")
 
 
     }.resume()     // 시작
-   
+
 }
 
 
+
+func getMethod2(_ url: String, completion: @escaping (Data?, Error?) -> Void) {
+    // URL구조체 만들기
+    guard let url = URL(string: url) else {
+        print("Error: cannot create URL")
+        return
+    }
+    
+    // URL요청 생성
+    var request = URLRequest(url: url)
+    request.httpMethod = "GET"
+    
+    // 요청을 가지고 작업세션시작
+    URLSession.shared.dataTask(with: request) { data, response, error in
+        // 에러 처리
+        if let error = error {
+            print("Error: error calling GET")
+            print(error)
+            completion(nil, error)
+            return
+        }
+        
+        // 옵셔널 바인딩
+        guard let safeData = data else {
+            print("Error: Did not receive data")
+            completion(nil, nil)
+            return
+        }
+        
+        // HTTP 200번대 정상코드인 경우만 다음 코드로 넘어감
+        guard let response = response as? HTTPURLResponse, (200 ..< 299) ~= response.statusCode else {
+            print("Error: HTTP request failed")
+            completion(nil, nil)
+            return
+        }
+            
+        completion(safeData, nil)
+        print("response is : \(response)")
+
+    }.resume()     // 시작
+}

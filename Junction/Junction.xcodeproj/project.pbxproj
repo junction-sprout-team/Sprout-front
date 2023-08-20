@@ -35,6 +35,8 @@
 		3E6414902A913B0B005478B6 /* MainModalArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E64148F2A913B0B005478B6 /* MainModalArea.swift */; };
 		3E6414922A913F51005478B6 /* RectangleListArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6414912A913F51005478B6 /* RectangleListArea.swift */; };
 		3E6414942A91492A005478B6 /* DataDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6414932A91492A005478B6 /* DataDecoder.swift */; };
+		3E6414962A916762005478B6 /* MainView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6414952A916762005478B6 /* MainView2.swift */; };
+		3E6414982A917534005478B6 /* RectangleListArea2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6414972A917534005478B6 /* RectangleListArea2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +70,8 @@
 		3E64148F2A913B0B005478B6 /* MainModalArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModalArea.swift; sourceTree = "<group>"; };
 		3E6414912A913F51005478B6 /* RectangleListArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleListArea.swift; sourceTree = "<group>"; };
 		3E6414932A91492A005478B6 /* DataDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDecoder.swift; sourceTree = "<group>"; };
+		3E6414952A916762005478B6 /* MainView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView2.swift; sourceTree = "<group>"; };
+		3E6414972A917534005478B6 /* RectangleListArea2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleListArea2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,9 +132,9 @@
 			children = (
 				3E444AC62A90E41900A04A3D /* Component */,
 				3E444AA32A90406800A04A3D /* Main */,
-				3E64148C2A910DD5005478B6 /* RegisterRide */,
 				3E444A992A8FF5B500A04A3D /* Login */,
 				3E444AC22A90420800A04A3D /* MyPageView */,
+				3E64148C2A910DD5005478B6 /* RegisterRide */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -167,6 +171,8 @@
 				3E444AA42A90407E00A04A3D /* MainView.swift */,
 				3E6414912A913F51005478B6 /* RectangleListArea.swift */,
 				3E64148F2A913B0B005478B6 /* MainModalArea.swift */,
+				3E6414952A916762005478B6 /* MainView2.swift */,
+				3E6414972A917534005478B6 /* RectangleListArea2.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -332,6 +338,7 @@
 				3E444AC42A90424200A04A3D /* MyPageView.swift in Sources */,
 				3E6414902A913B0B005478B6 /* MainModalArea.swift in Sources */,
 				3E6414922A913F51005478B6 /* RectangleListArea.swift in Sources */,
+				3E6414962A916762005478B6 /* MainView2.swift in Sources */,
 				3E444ACB2A90E84900A04A3D /* TripModel.swift in Sources */,
 				3E444A9D2A8FFC0800A04A3D /* LoginView.swift in Sources */,
 				3E444A882A8F8C1600A04A3D /* JunctionApp.swift in Sources */,
@@ -341,6 +348,7 @@
 				3E444AA22A8FFEED00A04A3D /* UserDefaultManager.swift in Sources */,
 				3E444AAE2A90415200A04A3D /* FontExtension.swift in Sources */,
 				3E444AAA2A90411D00A04A3D /* ColorExtension.swift in Sources */,
+				3E6414982A917534005478B6 /* RectangleListArea2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

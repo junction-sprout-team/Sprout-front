@@ -10,9 +10,11 @@ import SwiftUI
 struct MyPageView: View {
 
     var body: some View {
-        VStack {
-            Text("Sprout")
-            
+        ZStack {
+            VStack {
+                Text("Sprout")
+                Text("ID: Bokyung Park")
+            }
         }
         .background(Color.mainPrimary500.ignoresSafeArea())
     }

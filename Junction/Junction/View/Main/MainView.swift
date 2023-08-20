@@ -10,7 +10,7 @@ import SwiftUI
 struct MainView: View {
     @State var shareOption: Int = 0
     @State var radioSelected: String = ""
-    
+
     @State var isModal: Bool = false // modal을 띄우기 위한 변수
     
     var body: some View {
@@ -20,8 +20,8 @@ struct MainView: View {
                 .aspectRatio(contentMode: .fit)
                 .offset(y: 40)
             VStack (alignment: .leading, spacing: 0){
-                HStack (spacing: 0){
-                    Text("Catch your Car")
+                HStack (spacing: 16){
+                    Text("Breezy")
                     Spacer()
                     NavigationLink {
                         // destination
@@ -34,12 +34,12 @@ struct MainView: View {
                             .foregroundColor(.black)
                     }
                     .padding(.horizontal, 10)
-                    
+
                     NavigationLink {
                         // destination
                         MyPageView()
                     } label: {
-                        Image(systemName: "line.3.horizontal")
+                        Image(systemName: "person")
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                             .frame(width: 20)
@@ -49,46 +49,46 @@ struct MainView: View {
                 .padding(.horizontal, 28)
                 .padding(.top, 28)
                 .padding(.bottom, 47)
-                
+
                 // MARK: 화면 상단 중앙의 Text
                 VStack (alignment: .leading, spacing: 0) {
                     Text("Dear Sprout, ")
                         .foregroundColor(Color(hex: 0x333333).opacity(0.4))
                         .font(.pretendard(.bold, size: 16))
                         .padding(.bottom, 8)
-                    
-                    Text("Shall we go to make foriegn friends?")
+
+                    Text("Hope on to Breezy the local Busan Ride.")
                         .multilineTextAlignment(.leading)
                         .font(.pretendard(.medium, size: 28))
                         .foregroundColor(Color(hex: 0x7fb6f6))
                         .padding(.bottom, 90)
                 }
-                .padding(.leading, 32)
-                
+                .padding(.horizontal, 32)
+
                 ScrollView {
-                    RadioButtonGroup(items: ["All", "Only join", "Only Suggestion"], selectedId: "All") { selected in
+                    RadioButtonGroup(items: ["All", "Ride request", "Ride offer"], selectedId: "All") { selected in
                         print("Selected is: \(selected)")
                         self.radioSelected = selected
                         if radioSelected == "All" {
                             getMethod(url+"journeys/all")
                         }
-                        else if radioSelected == "Only join" {
+                        else if radioSelected == "Ride request" {
                             getMethod(url+"journeys/riderequest")
                         } else {
                             getMethod(url+"journeys/rideoffer")
                         }
                     }
-                    
-                    
+
+
                     ForEach(tripData) { td in
-                        RectangleListArea(departure: td.departure, destination: td.destination, date: td.date, imageTitle: td.imageTitle, memeberName: td.memeberName, maxMember: td.maxMember, currentState: td.currentState, buttonColor: td.buttonColor, isModal: $isModal)
+                        RectangleListArea(departure: td.departure, destination: td.destination, date: td.date, imageTitle: td.imageTitle, memberName: td.memberName, maxMember: td.maxMember, currentState: td.currentState, buttonColor: td.buttonColor, isModal: $isModal)
                     }
-                    
+
                 } // ScrollView
             }
             .frame(maxWidth: .infinity, alignment: .leading)
             .sheet(isPresented: $isModal) {
-                MainModalArea(departure: "Busan Station", destination: "Seomyeon Station", date: "Departed at August 20,  2023 (Sun) 15:30", imageTitle: "car.fill", memeberName: "Sprout", maxMember: 3, currentState: "Join", buttonColor: .mainPoint500)
+                MainModalArea(departure: "Busan Station", destination: "Seomyeon Station", date: "Departed at August 20,  2023 (Sun) 15:30", imageTitle: "car.fill", memberName: "Sprout", maxMember: 3, currentState: "Join", buttonColor: .mainPoint500)
                     .presentationDetents([.sheetSize])
             }
         } // ZStack

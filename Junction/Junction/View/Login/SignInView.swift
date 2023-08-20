@@ -123,7 +123,6 @@ struct SignInView: View {
     
         } // VStack
         .padding(.horizontal, 52)
-        .border(.red)
     }
 }
 

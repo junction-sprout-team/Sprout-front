@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-//(departure: String, destination: String, date: String, imageTitle: String, memeberName: String, maxMember: Int, currentState: String, buttonColor: Color)
+//(departure: String, destination: String, date: String, imageTitle: String, memberName: String, maxMember: Int, currentState: String, buttonColor: Color)
 
 struct MainModalArea: View {
     @Environment(\.presentationMode) var presentationMode // 현재의 뷰를 제거(뒤로 가기)하기 위한 변수
@@ -16,7 +16,7 @@ struct MainModalArea: View {
     var destination: String
     var date: String
     var imageTitle: String
-    var memeberName: String
+    var memberName: String
     var maxMember: Int
     var currentState: String
     var buttonColor: Color
@@ -47,7 +47,7 @@ struct MainModalArea: View {
                                 .frame(width: 11)
                                 .foregroundColor(Color(hex: 0x7FB6F5))
                                 .padding(.trailing, 8)
-                            Text(memeberName)
+                            Text(memberName)
                                 .font(.pretendard(.medium, size: 12))
                                 .foregroundColor(Color(hex: 0x7FB6F6))
                                 .padding(.trailing, 4)
@@ -57,15 +57,6 @@ struct MainModalArea: View {
                                 .foregroundColor(Color(hex: 0xC33939))
                             Spacer()
                             
-                            Button {
-                                // action
-                            } label: {
-                                Text(currentState)
-                                    .foregroundColor(buttonColor == .mainSub2500 ? Color.white :  Color.black)
-                                    .padding(.horizontal, 15)
-                                    .padding(.vertical, 6)
-                                    .background(buttonColor.cornerRadius(8))
-                            }
                         } // HStack
                     }
                     .padding(EdgeInsets(top: 20, leading: 23, bottom: 14, trailing: 24))
@@ -102,12 +93,12 @@ struct MainModalArea: View {
         }
         .padding(.horizontal, 39)
         .padding(.vertical, 52)
-        .border(.red)
+        //.border(.red)
     }
 }
 
 struct MainModalArea_Previews: PreviewProvider {
     static var previews: some View {
-        MainModalArea(departure: "Busan Station", destination: "Seomyeon Station", date: "Departed at August 20,  2023 (Sun) 15:30", imageTitle: "car.fill", memeberName: "Sprout", maxMember: 3, currentState: "Join", buttonColor: .mainPoint500)
+        MainModalArea(departure: "Busan Station", destination: "Seomyeon Station", date: "At August 20,  2023 (Sun) 15:30", imageTitle: "car.fill", memberName: "Sprout", maxMember: 3, currentState: "Give a Ride", buttonColor: .mainPoint500)
     }
 }
