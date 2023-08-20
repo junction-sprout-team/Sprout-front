@@ -10,12 +10,14 @@ import SwiftUI
 struct RegisterRideView: View {
     @State var departure: String = ""
     @State var destination: String = ""
-    @State var rideType: String = "Ride"
+    @State var rideType: String = "Ride request"
     @State var pickedDate: Date = Date()
     @State var peopleRide: Int = 0
     @State var introduce: String = ""
     
     @State var isAlert: Bool = false // Alert를 띄우기 위한 변수
+    let alertText1: String = "Make sure to appreciate\n your driving mate with a small gift\n or a word of kindness."
+    let alertText2: String = "A new world awiats with the ocean way drive."
     
     @Environment(\.presentationMode) var presentationMode // 현재의 뷰를 제거(뒤로 가기)하기 위한 변수
     
@@ -30,7 +32,7 @@ struct RegisterRideView: View {
                 .font(.pretendard(.bold, size: 16))
                 .foregroundColor(.textLight300)
             
-            RadioButtonGroup(items: ["Ride request", "Ride offer"], selectedId: "Ride") { selected in
+            RadioButtonGroup(items: ["Ride request", "Ride offer"], selectedId: "Ride request") { selected in
                 print("Selected is: \(selected)")
                 rideType = selected
             }.padding(.top, 41.5)
@@ -118,7 +120,7 @@ struct RegisterRideView: View {
                     })
             }.padding(.top, 32)
             
-        
+            
             Button {
                 // action
                 let formattedDate = formatDateToString(date: pickedDate, format: "yyyy-MM-dd HH:mm")
@@ -148,8 +150,7 @@ struct RegisterRideView: View {
         }
         .padding(.horizontal, 20)
         .alert(isPresented: $isAlert) {
-            
-            Alert(title: Text("Have a great trip!"), message: Text("Make sure to appreciate your driving mate!"), dismissButton: .default(Text("Confirm"), action: {
+            Alert(title: Text("Have a great trip!"), message: Text(rideType == "Ride request" ? alertText1 : alertText2), dismissButton: .default(Text("Confirm"), action: {
                 presentationMode.wrappedValue.dismiss() // 현재의 뷰를 제거(뒤로 가기)하기 위한 변수
             })) // Alert
         } // alert
