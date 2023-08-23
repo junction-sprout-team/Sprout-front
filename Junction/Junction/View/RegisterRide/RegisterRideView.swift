@@ -138,6 +138,7 @@ struct RegisterRideView: View {
                 } // sendPostRequest
                 
                 isAlert = true // alert띄우기
+                presentationMode.wrappedValue.dismiss() // 현재의 뷰를 제거(뒤로 가기)하기 위한 변수
             } label: {
                 Text("Give a ride")
                     .font(.pretendard(.bold, size: 16))
