@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-let url: String = "https://fcea-110-70-54-54.ngrok-free.app/"
+let url: String = "https://3db1-14-46-199-32.ngrok-free.app/"
 
 struct SignInView: View {
     @State var userName: String = ""
@@ -97,7 +97,7 @@ struct SignInView: View {
                 isClicked = true
                 
                 // 회원가입 POST로직
-                sendPostRequest("\(url)users/signup", parameters:
+                sendPostRequest("\(url)signup", parameters:
                                     ["userName": self.userName, "userID": self.userID, "password": self.userPassword]
                 ){
                     responseObject, error in guard let _ = responseObject, error == nil else {

@@ -13,7 +13,7 @@ struct LoginView: View {
     @State private var loginStatus: Bool = false // TODO env 변수로 선언 후 토큰 계속 확인
     @State private var userAccessToken: String = ""
     
-    var body: some View {
+    var body: some View {미
         NavigationView{
             if self.loginStatus == true {
                 //                        ProfileDetailView(userEmail: self.email, userAccessToken: self.userAccessToken)
@@ -72,7 +72,7 @@ struct LoginView: View {
                         if rft != nil {
                             UserDefaults.standard.set(rft, forKey: self.userID)
                         } else{
-                            sendPostRequest("\(url)users/signin", parameters: ["userID": self.userID, "password": self.password]){
+                            sendPostRequest("\(url)login", parameters: ["loginId": self.userID, "password": self.password]){
                                 responseObject, error in guard let _ = responseObject, error == nil else {
                                     print(error ?? "Unknown error")
                                     return
